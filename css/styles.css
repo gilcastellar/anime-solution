@@ -1,0 +1,19 @@
+.table {
+    width: 700px;
+    font-size: large;
+    text-align: center;
+}
+
+.progress {
+    width: 100px;
+    height: 30px;
+    font-size: large;
+}
+
+#increase-btn {
+    text-align: left;
+}
+
+#decrease-btn {
+    text-align: right;
+}
