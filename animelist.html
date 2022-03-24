@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        var number = 0;
+    </script>
     <script src="js/script.js"></script>
     <title>Document</title>
 </head>
@@ -27,11 +30,11 @@
             <tr>
                 <td>Futari wa Precure</td>
                 <td id="decrease-btn">
-                    <button>-</button>
+                    <button type="button" value="input" onclick="decreaseOne()">-</button>
                 </td>
-                <td>21</td>
+                <td id="episode"></td>
                 <td id="increase-btn">
-                    <button>+</button>
+                    <button type="button" value="input" onclick="addOne()">+</button>
                 </td>
                 <td>49</td>
             </tr>
