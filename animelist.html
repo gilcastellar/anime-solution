@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script>
         var number = 0;
+        var row = 1;
     </script>
     <script src="js/script.js"></script>
     <title>Document</title>
@@ -16,6 +17,23 @@
 <body>
     <h1 class="text-center">Kaiser Watching</h1>
     <br>
+    <div class="text-center">
+        <button id="add-anime-btn" type="button" value="input" onclick="genTableRow()">Add Anime</button>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="inputAnimeName">Anime name:</label>
+            <input style="width: 300px" type="text" class="form-control" id="inputAnimeName" placeholder="Enter anime name...">
+        </div>
+        <div class="form-group">
+            <label for="inputProgress">Progress</label>
+            <input style="width: 300px" type="text" class="form-control" id="inputProgress">
+        </div>
+        <div class="form-group">
+            <label for="inputTotalEpisodes">Total episodes</label>
+            <input style="width: 300px" type="text" class="form-control" id="inputTotalEpisodes">
+        </div>
+    </form>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -27,18 +45,30 @@
             </tr>
         </thead>
         <tbody>
-            <tr id="row1">
+            <tr>
                 <td>Futari wa Precure</td>
                 <td id="decrease-btn">
-                    <button type="button" value="input" onclick="decreaseOne()">-</button>
+                    <button type="button" value="input" onclick="decreaseOne(1)">-</button>
                 </td>
-                <td id="episode"></td>
+                <td id="row1Progress">0</td>
                 <td id="increase-btn">
-                    <button type="button" value="input" onclick="addOne()">+</button>
+                    <button type="button" value="input" onclick="addOne(1)">+</button>
                 </td>
-                <td>49</td>
+                <td id="row1Total">49</td>
             </tr>
+            <!--<tr>
+                <td>Chihayafuru</td>
+                <td id="decrease-btn">
+                    <button type="button" value="input" onclick="decreaseOne(2)">-</button>
+                </td>
+                <td id="row2">0</td>
+                <td id="increase-btn">
+                    <button type="button" value="input" onclick="addOne(2)">+</button>
+                </td>
+                <td>24</td>
+            </tr>-->
         </tbody>
     </table>
+    <div id="content"></div>
 </body>
 </html>

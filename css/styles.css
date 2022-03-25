@@ -17,3 +17,9 @@
 #decrease-btn {
     text-align: right;
 }
+
+#add-anime-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+}
