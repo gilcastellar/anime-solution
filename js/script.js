@@ -13,9 +13,6 @@ function decreaseOne (row) {
 }
 
 function addNewDiv () {
-
-
-
     var newDiv = "<div id='newDiv";
     newDiv += row;
     newDiv += "'></div>";
