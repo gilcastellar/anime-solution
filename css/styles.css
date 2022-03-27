@@ -1,7 +1,60 @@
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#anime-form {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    max-width: 480px;
+    font-size: 16px;
+}
+
+.form-control {
+    font-size: 16px;
+}
+
+#add-anime-btn {
+    margin-left: 100px;
+    margin-top: 8px;
+}
+
+#total-remaining {
+    position: absolute;
+    margin-left: 550px;
+    text-align: center;
+}
+
+#total-remaining-value {
+    font-size: 200px;
+    position: relative;
+}
+
+#total-remaining-text {
+    font-size: 22px;
+    position: relative;
+    // margin-left: 485px;
+    margin-top: -30px;
+}
+
+.anime-table-row {
+    margin: 0 0 0 0;
+}
+
 .table {
-    width: 700px;
+    clear: both;
+    margin: 0 0 0 0;
+    max-width: 960px;
     font-size: large;
     text-align: center;
+}
+
+#anime-row-name {
+    font-size: 18px;
+    vertical-align: middle;
 }
 
 .progress {
@@ -10,13 +63,17 @@
     font-size: large;
 }
 
-#increase-btn {
+.remaining-value {
+    font-weight: bold;
+}
+
+/* #increase-btn {
     text-align: left;
 }
 
 #decrease-btn {
     text-align: right;
-}
+} */
 
 #add-anime-btn {
     width: 100px;

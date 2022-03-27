@@ -8,19 +8,17 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script>
-        var number = 0;
+        var remainingEpis = 0;
         var row = 1;
     </script>
     <script src="js/script.js"></script>
-    <title>Document</title>
+    <title>Watching List Alpha</title>
 </head>
 <body>
-    <h1 class="text-center">Kaiser Watching</h1>
+    <!-- <h1 id="website-title">Watching List</h1> -->
     <br>
-    <div class="text-center">
-        <button id="add-anime-btn" type="button" value="input" onclick="genTableRow()">Add Anime</button>
-    </div>
-    <form>
+    <form id="anime-form">
+        <h1>Add anime</h1>
         <div class="form-group">
             <label for="inputAnimeName">Anime name:</label>
             <input style="width: 300px" type="text" class="form-control" id="inputAnimeName" placeholder="Enter anime name...">
@@ -33,18 +31,24 @@
             <label for="inputTotalEpisodes">Total episodes</label>
             <input style="width: 300px" type="number" class="form-control" id="inputTotalEpisodes">
         </div>
+        <button id="add-anime-btn" type="button" value="input" onclick="newAnime()">Add Anime</button>
     </form>
-    <table class="table table-bordered">
+    <div id="total-remaining">
+        <span id="total-remaining-value"></span>
+        <p id="total-remaining-text"></p>
+    </div>
+    <table id="anime-table" class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col">Anime</th>
-                <th scope="col"></th>
-                <th scope="col">Progress</th>
-                <th scope="col"></th>
-                <th scope="col">Total</th>
+                <th style="width: 300px" scope="col">Anime</th>
+                <th style="width: 50px" scope="col"></th>
+                <th style="width: 100px" scope="col">Progress</th>
+                <th style="width: 50px" scope="col"></th>
+                <th style="width: 80px" scope="col">Total</th>
+                <th style="width: 110px" scope="col">Remaining</th>
             </tr>
         </thead>
-        <tbody>
+        <!-- <tbody id="aniem-table-body">
             <tr>
                 <td>Futari wa Precure</td>
                 <td id="decrease-btn">
@@ -56,7 +60,7 @@
                 </td>
                 <td id="row1Total">49</td>
             </tr>
-            <!--<tr>
+            <tr>
                 <td>Chihayafuru</td>
                 <td id="decrease-btn">
                     <button type="button" value="input" onclick="decreaseOne(2)">-</button>
@@ -66,8 +70,8 @@
                     <button type="button" value="input" onclick="addOne(2)">+</button>
                 </td>
                 <td>24</td>
-            </tr>-->
-        </tbody>
+            </tr>
+        </tbody> -->
     </table>
     <div id="content"></div>
 </body>
