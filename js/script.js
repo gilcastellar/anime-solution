@@ -46,7 +46,7 @@ function newAnime () {
     var progress = document.getElementById("inputProgress").value;
     var total = document.getElementById("inputTotalEpisodes").value;
 
-    while (name != '' && progress != '' && total != '') {
+    while (name != '' && progress != '' && total != '' && progress < total) {
         row += 1;
 
         //addNewDiv();
@@ -82,6 +82,13 @@ function newAnime () {
         break;
     }
 
+    if (name == '' || progress == '' || total == '') {
+        window.alert("Don't leave any empty fields!");
+    }
+
+    else if (progress >= total) {
+        window.alert("The progress can't be larger or equal to the total!");
+    }
     
 
     //</tr></tbody></table>";
